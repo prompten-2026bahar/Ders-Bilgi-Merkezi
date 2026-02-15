@@ -1,3 +1,5 @@
+Bu döküman, öğrencilerinizin hem akademik hem de teknik standartlara uygun bir çıktı üretmesini sağlayacak şekilde tasarlanmıştır. Bu rehberi GitHub organizasyonunuzun ana sayfasına veya Teams'deki "Dosyalar" bölümüne "PROJE_STANDARTLARI.md" adıyla yükleyebilirsiniz.
+________________________________________
 🚀 PROJE STANDARTLARI VE GITHUB REPO REHBERİ
 Değerli öğrenciler, bu ders kapsamında yapacağınız tüm çalışmaların (çeviri, vize ve final projeleri) yönetimi için GitHub kullanılacaktır. Her grubun tek bir repo (depo) üzerinden çalışması ve aşağıdaki standartlara uyması zorunludur.
 ________________________________________
@@ -54,3 +56,68 @@ ________________________________________
 ________________________________________
 💡 Önemli İpucu
 Dönem sonunda reponuzun "Public" (açık) olması, iş görüşmelerinde bu projeyi bir referans olarak göstermenize olanak sağlar. Bu yüzden kodlarınızın temiz ve dökümantasyonunuzun eksiksiz olmasına özen gösterin.
+
+ 
+"Sıfırdan Kurulum Kılavuzu"
+________________________________________
+🛠️ PROMPT MÜHENDİSLİĞİ: HIZLI BAŞLANGIÇ VE KURULUM REHBERİ
+Bu rehber, derste kullanacağımız araçların bilgisayarınıza sorunsuz kurulması için hazırlanmıştır.
+1. Python Kurulumu
+Bilgisayarınızda Python 3.10 veya daha yeni bir sürüm kurulu olmalıdır.
+•	Kontrol: Terminal/PowerShell açın ve python --version yazın.
+•	Yükleme: Eğer yüklü değilse python.org üzerinden en güncel kararlı sürümü indirin.
+•	Dikkat: Kurulum sırasında "Add Python to PATH" seçeneğini işaretlediğinizden emin olun.
+2. IDE (Geliştirme Ortamı) Önerisi
+Kod yazmak ve projeleri yönetmek için aşağıdaki araçlardan birini kullanmanız tavsiye edilir:
+•	VS Code (Önerilen): Python ve Jupyter eklentileriyle birlikte.
+•	Cursor: AI destekli kod yazımı için (Prompt mühendisliğine giriş için harika bir deneyim sunar).
+3. Sanal Ortam (Virtual Environment) Oluşturma
+Projelerinizin birbirine karışmaması için her grup/öğrenci bir sanal ortam oluşturmalıdır:
+Bash
+# Proje klasörünüze gidin
+cd proje-klasorum
+
+# Sanal ortam oluşturun
+python -m venv venv
+
+# Aktif hale getirin:
+# Windows için:
+.\venv\Scripts\activate
+# Mac/Linux için:
+source venv/bin/activate
+4. Temel Kütüphanelerin Kurulumu
+Grubunuza atanan kütüphaneye göre aşağıdaki komutu çalıştırın:
+•	Genel (Herkes İçin): pip install python-dotenv openai anthropic
+•	1. Grup (LangChain): pip install langchain langchain-openai
+•	2. Grup (LlamaIndex): pip install llama-index
+•	3. Grup (CrewAI): pip install crewai
+•	4. Grup (DSPy): pip install dspy-ai
+•	5. Grup (promptfoo): npm install -g promptfoo (Not: promptfoo Node.js gerektirir)
+5. API Anahtarları ve Güvenlik (Kritik!)
+Prompt mühendisliği için bir model sağlayıcısına (OpenAI, Anthropic veya Google Gemini) ihtiyacınız olacak.
+•	.env Dosyası Kullanımı: API anahtarlarınızı asla doğrudan kodun içine yazmayın!
+•	Proje klasörünüzde .env adlı bir dosya oluşturun ve içine şunu yazın:
+Kod snippet'i
+OPENAI_API_KEY=sk-your-key-here
+•	.gitignore Kontrolü: GitHub'a dosya yüklerken .env dosyasının gitmediğinden emin olun. (Bu, not kırma sebebidir!)
+6. Kurulum Testi (Hello World)
+Her şeyin doğru çalıştığını test etmek için aşağıdaki küçük Python kodunu çalıştırın:
+Python
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv() # .env dosyasındaki anahtarı yükler
+client = OpenAI()
+
+response = client.chat.completions.create(
+  model="gpt-4o-mini",
+  messages=[{"role": "user", "content": "Merhaba AI, kurulumum tamam mı?"}]
+)
+
+print(response.choices[0].message.content)
+________________________________________
+Notlar:
+1.	Node.js Notu: promptfoo grubu için bilgisayarlarında Node.js yüklü olması gerekir
+2.	Maliyet Yönetimi: Öğrencilere OpenAI'ın "Usage" kısmından limit belirleyin. 
+
