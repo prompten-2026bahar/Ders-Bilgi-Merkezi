@@ -5,6 +5,7 @@ Değerli öğrenciler, bu ders kapsamında yapacağınız tüm çalışmaların 
 ---
 
 ## 1. Depo (Repository) Yapısı
+
 Reponuzun düzeni, değerlendirme sürecinin hızı ve profesyonelliği açısından kritiktir. Aşağıdaki klasör yapısını birebir uygulayınız:
 
 ```text
@@ -23,100 +24,138 @@ Reponuzun düzeni, değerlendirme sürecinin hızı ve profesyonelliği açısı
 │   └── ...
 ├── docs/                   # Sunum dosyaları (PDF) ve Ek raporlar
 └── README.md               # Projenin ana tanıtım sayfası (Açılış ekranı)
+```
 
-2. README.md Standartları
-Reponun ana sayfasındaki README.md dosyası, projenizin vitrinidir. Şu başlıkları içermelidir:
+## 2. README.md Standartları
 
-Grup Adı ve Üyeler: Her üyenin adı ve öğrenci numarası.
+Reponun ana sayfasındaki *README.md* dosyası, projenizin vitrinidir. Şu başlıkları içermelidir:
 
-Kütüphane Tanıtımı: Atanan kütüphanenin kısa (3-4 cümlelik) teknik tanımı.
+* **Grup Adı ve Üyeler:** Her üyenin adı ve öğrenci numarası.
 
-Hızlı Bağlantılar: Çeviri dosyalarına ve projelere giden linkler.
+* **Kütüphane Tanıtımı:** Atanan kütüphanenin kısa (3-4 cümlelik) teknik tanımı.
 
-Kurulum: Projeyi yerel bilgisayarda çalıştırmak için gerekli komutlar (pip install ... vb.)
+* **Hızlı Bağlantılar:** Çeviri dosyalarına ve projelere giden linkler.
 
-3. Markdown (Çeviri) Kuralları
+* **Kurulum:** Projeyi yerel bilgisayarda çalıştırmak için gerekli komutlar (`pip install ...` vb.)
+
+## 3. Markdown (Çeviri) Kuralları
+
 Dokümantasyon çevirilerini yaparken aşağıdaki formatı kullanınız:
 
-Kod Blokları: Kodları mutlaka dil belirterek yazın.
-# Örnek kullanım
+**Kod Blokları:** Kodları mutlaka dil belirterek yazın.
+
+### Örnek kullanım
+
+```py
 from langchain import PromptTemplate
+```
 
-Teknik Terimler: Yaygın kullanılan teknik terimleri (Prompt, Embedding, RAG vb.) olduğu gibi bırakıp yanına parantez içinde Türkçe karşılığını yazabilirsiniz.
+**Teknik Terimler:** Yaygın kullanılan teknik terimleri (Prompt, Embedding, RAG vb.) olduğu gibi bırakıp yanına parantez içinde Türkçe karşılığını yazabilirsiniz.
 
-Görseller: Çevirdiğiniz bölümlerde şema varsa, bunları Markdown içinde şu şekilde çağırın: ![Açıklama](resim_linki).
+**Görseller:** Çevirdiğiniz bölümlerde şema varsa, bunları Markdown içinde şu şekilde çağırın:
 
-4. Bireysel Proje Raporu Formatı
-Her öğrenci, vize ve final klasörünün içine bir RAPOR.md eklemelidir. Bu rapor şunları içermelidir:
+`![Açıklama](resim_linki)`
 
-Problem Tanımı: Bu uygulama hangi sorunu çözüyor?
+## 4. Bireysel Proje Raporu Formatı
 
-Prompt Stratejisi: Hangi prompt tekniklerini (Few-shot, CoT vb.) kullandınız?
+Her öğrenci, vize ve final klasörünün içine bir *RAPOR.md* eklemelidir. Bu rapor şunları içermelidir:
 
-Teknik Mimari: Hangi LLM modeli ve hangi kütüphane özellikleri kullanıldı?
+* **Problem Tanımı:** Bu uygulama hangi sorunu çözüyor?
 
-Ekran Görüntüsü/Demo: Uygulamanın çalıştığına dair bir GIF veya görsel.
+* **Prompt Stratejisi:** Hangi prompt tekniklerini (Few-shot, CoT vb.) kullandınız?
 
-5. Git Kullanım Kuralları (Mühendislik Etiği)
-Commit Mesajları: "Güncelleme yaptım" gibi belirsiz mesajlar yerine; "LlamaIndex RAG pipeline eklendi" gibi açıklayıcı mesajlar yazın.
+* **Teknik Mimari:** Hangi LLM modeli ve hangi kütüphane özellikleri kullanıldı?
 
-Katılım Takibi: Her öğrenci kendi kodunu ve çevirisini kendi GitHub hesabı üzerinden push etmelidir. Bu, bireysel katkıyı ölçmek için kullanılacaktır.
+* **Ekran Görüntüsü/Demo:** Uygulamanın çalıştığına dair bir GIF veya görsel.
 
-6. Teams ve Dosya Teslimi
-Kodlar: Sadece GitHub üzerinde duracaktır.
+## 5. Git Kullanım Kuralları (Mühendislik Etiği)
 
-Sunumlar: Sunum günü kullanılacak .pptx veya .pdf dosyaları, sunumdan 1 saat önce Microsoft Teams üzerindeki ilgili haftanın kanalına yüklenmelidir.
+* **Commit Mesajları:** "Güncelleme yaptım" gibi belirsiz mesajlar yerine; "LlamaIndex RAG pipeline eklendi" gibi açıklayıcı mesajlar yazın.
 
-💡 Önemli İpucu: Dönem sonunda reponuzun "Public" (açık) olması, iş görüşmelerinde bu projeyi bir referans olarak göstermenize olanak sağlar.
+* **Katılım Takibi:** Her öğrenci kendi kodunu ve çevirisini kendi GitHub hesabı üzerinden push etmelidir. Bu, bireysel katkıyı ölçmek için kullanılacaktır.
 
+## 6. Teams ve Dosya Teslimi
 
+* **Kodlar:** Sadece GitHub üzerinde duracaktır.
 
+* **Sunumlar:** Sunum günü kullanılacak .pptx veya .pdf dosyaları, sunumdan 1 saat önce Microsoft Teams üzerindeki ilgili haftanın kanalına yüklenmelidir.
 
-PROMPT MÜHENDİSLİĞİ: HIZLI BAŞLANGIÇ VE KURULUM REHBERİ
-1. Python Kurulumu
+> 💡 Önemli İpucu: Dönem sonunda reponuzun "Public" (açık) olması, iş görüşmelerinde bu projeyi bir referans olarak göstermenize olanak sağlar.
+
+### PROMPT MÜHENDİSLİĞİ: HIZLI BAŞLANGIÇ VE KURULUM REHBERİ
+
+#### 1. Python Kurulumu
+
 Bilgisayarınızda Python 3.10+ kurulu olmalıdır.
 
-Kontrol: python --version
+Kontrol:
 
-Dikkat: Kurulumda "Add Python to PATH" seçeneğini işaretleyin.
+```bash
+python --version
+```
 
-2. Sanal Ortam (Virtual Environment) Oluşturma
-# Proje klasörüne gidin
+> Dikkat: Kurulumda "Add Python to PATH" seçeneğini işaretleyin.
+
+#### 2. Sanal Ortam (Virtual Environment) Oluşturma
+
+##### Proje klasörüne gidin
+
+```bash
 cd proje-klasorum
+```
 
-# Ortamı oluşturun
+##### Ortamı oluşturun
+
+```bash
 python -m venv venv
+```
 
-# Aktif edin (Windows):
+##### Aktif edin (Windows)
+
+```bash
 .\venv\Scripts\activate
-# Aktif edin (Mac/Linux):
+```
+
+##### Aktif edin (Mac/Linux)
+
+```bash
 source venv/bin/activate
-3. Temel Kütüphanelerin Kurulumu
+```
+
+#### 3. Temel Kütüphanelerin Kurulumu
+
 Grubunuza göre ilgili komutu çalıştırın:
 
-Genel: pip install python-dotenv openai anthropic
+Genel: `pip install python-dotenv openai anthropic`
 
-1. Grup (LangChain): pip install langchain langchain-openai
+1. Grup (LangChain): `pip install langchain langchain-openai`
 
-2. Grup (LlamaIndex): pip install llama-index
+2. Grup (LlamaIndex): `pip install llama-index`
 
-3. Grup (CrewAI): pip install crewai
+3. Grup (CrewAI): `pip install crewai`
 
-4. Grup (DSPy): pip install dspy-ai
+4. Grup (DSPy): `pip install dspy-ai`
 
-5. Grup (promptfoo): npm install -g promptfoo
+5. Grup (promptfoo): `npm install -g promptfoo`
 
-4. API Anahtarları ve Güvenlik
-Proje ana dizininde .env adlı bir dosya oluşturun:
+#### 4. API Anahtarları ve Güvenlik
+
+Proje ana dizininde *.env* adlı bir dosya oluşturun:
+
+```txt
 OPENAI_API_KEY=sk-your-key-here
-UYARI: .env dosyasını asla GitHub'a yüklemeyin! .gitignore dosyanıza eklediğinizden emin olun.
+```
 
-5. Kurulum Testi
+> UYARI: .env dosyasını asla GitHub'a yüklemeyin! .gitignore dosyanıza eklediğinizden emin olun.
+
+#### 5. Kurulum Testi
+
+```py
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
 
-load_dotenv() 
+load_dotenv()
 client = OpenAI()
 
 response = client.chat.completions.create(
@@ -125,3 +164,4 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+```
